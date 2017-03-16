@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,15 +17,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.AboutFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.CemilanFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MakananFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MinumanFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.SupportFragment;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ViewPager vp_pages;
+    TabLayout tbl_pages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        vp_pages = (ViewPager) findViewById(R.id.vp_pages);
+        PagerAdapter pagerAdapter = new FragmentAdapter(getSupportFragmentManager());
+        vp_pages.setAdapter(pagerAdapter);
+
+        tbl_pages = (TabLayout) findViewById(R.id.tbl_pages);
+        tbl_pages.setupWithViewPager(vp_pages);
+
+        tbl_pages.setVisibility(View.GONE);
+        vp_pages.setVisibility(View.GONE);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -83,23 +104,33 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_makanan) {
+            tbl_pages.setVisibility(View.GONE);
+            vp_pages.setVisibility(View.GONE);
             fragment = new MakananFragment();
             setTitle("Makanan");
         } else if (id == R.id.nav_minuman) {
+            tbl_pages.setVisibility(View.VISIBLE);
+            vp_pages.setVisibility(View.VISIBLE);
             fragment = new MinumanFragment();
             setTitle("Minuman");
         } else if (id == R.id.nav_cemilan) {
+            tbl_pages.setVisibility(View.GONE);
+            vp_pages.setVisibility(View.GONE);
             fragment = new CemilanFragment();
             setTitle("Cemilan");
         } else if (id == R.id.nav_about) {
+            tbl_pages.setVisibility(View.GONE);
+            vp_pages.setVisibility(View.GONE);
             fragment = new AboutFragment();
             setTitle("About Us");
         } else if (id == R.id.nav_support) {
+            tbl_pages.setVisibility(View.GONE);
+            vp_pages.setVisibility(View.GONE);
             fragment = new SupportFragment();
             setTitle("Support By");
         }
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commitNow();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
