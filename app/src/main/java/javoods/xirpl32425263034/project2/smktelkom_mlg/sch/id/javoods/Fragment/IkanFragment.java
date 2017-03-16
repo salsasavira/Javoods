@@ -12,10 +12,10 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class mPanasFragment extends Fragment {
+public class IkanFragment extends Fragment {
 
 
-    public mPanasFragment() {
+    public IkanFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class mPanasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_m_panas, container, false);
+        return inflater.inflate(R.layout.fragment_ikan2, container, false);
     }
 
 }

@@ -4,9 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.DagingFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.IkanFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MakananFragment;
-import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.mDinginFragment;
-import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.mPanasFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.SayuranFragment;
 
 /**
  * Created by WINDOWS 8.1 on 16/3/2017.
@@ -24,11 +25,11 @@ class FragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new mPanasFragment();
+                return new DagingFragment();
             case 1:
-                return new mDinginFragment();
+                return new SayuranFragment();
             case 2:
-                return new MakananFragment();
+                return new IkanFragment();
         }
         return null;
 
