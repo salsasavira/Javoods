@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ViewPager vp_pages;
     TabLayout tbl_pages;
+    PagerAdapter pagerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,9 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         vp_pages = (ViewPager) findViewById(R.id.vp_pages);
-        PagerAdapter pagerAdapter = new FragmentAdapter(getSupportFragmentManager());
+        pagerAdapter = new FragmentAdapter(getSupportFragmentManager());
         vp_pages.setAdapter(pagerAdapter);
 
         tbl_pages = (TabLayout) findViewById(R.id.tbl_pages);
