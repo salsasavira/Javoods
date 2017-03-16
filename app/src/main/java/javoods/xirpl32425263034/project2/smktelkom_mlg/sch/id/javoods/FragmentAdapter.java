@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MakananFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.mDinginFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.mPanasFragment;
 
@@ -26,6 +27,8 @@ class FragmentAdapter extends FragmentPagerAdapter {
                 return new mPanasFragment();
             case 1:
                 return new mDinginFragment();
+            case 2:
+                return new MakananFragment();
         }
         return null;
 
@@ -33,7 +36,7 @@ class FragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Override
@@ -43,9 +46,11 @@ class FragmentAdapter extends FragmentPagerAdapter {
             //Your tab titles
             //
             case 0:
-                return "Panas";
+                return "Daging";
             case 1:
-                return "Dingin";
+                return "Sayuran";
+            case 2:
+                return "Ikan";
             default:
                 return null;
         }

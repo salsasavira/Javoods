@@ -106,13 +106,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_makanan) {
-            tbl_pages.setVisibility(View.GONE);
-            vp_pages.setVisibility(View.GONE);
+            tbl_pages.setVisibility(View.VISIBLE);
+            vp_pages.setVisibility(View.VISIBLE);
             fragment = new MakananFragment();
             setTitle("Makanan");
         } else if (id == R.id.nav_minuman) {
-            tbl_pages.setVisibility(View.VISIBLE);
-            vp_pages.setVisibility(View.VISIBLE);
+            tbl_pages.setVisibility(View.GONE);
+            vp_pages.setVisibility(View.GONE);
             fragment = new MinumanFragment();
             setTitle("Minuman");
         } else if (id == R.id.nav_cemilan) {
