@@ -25,6 +25,9 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.S
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+
     ViewPager vp_pages;
     TabLayout tbl_pages;
     PagerAdapter pagerAdapter;
