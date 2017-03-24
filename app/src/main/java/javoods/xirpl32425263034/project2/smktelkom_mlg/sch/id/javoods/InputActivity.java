@@ -137,6 +137,10 @@ public class InputActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             if (position == 0)
                 return new input_makanan();
+            else if (position == 1)
+                return new input_minuman();
+            else if (position == 2)
+                return new input_cemilan();
             else
                 return PlaceholderFragment.newInstance(position + 1);
         }
@@ -153,9 +157,9 @@ public class InputActivity extends AppCompatActivity {
                 case 0:
                     return "Makanan";
                 case 1:
-                    return "SECTION 2";
+                    return "Minuman";
                 case 2:
-                    return "SECTION 3";
+                    return "Cemilan";
             }
             return null;
         }
