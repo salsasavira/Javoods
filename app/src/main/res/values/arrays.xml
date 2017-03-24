@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="minuman">
+        <item> Jamu </item>
+        <item> Modern </item>
+    </string-array>
+
+    <string-array name="cemilan">
+        <item> Kue Basah </item>
+        <item> Kue Kering </item>
+    </string-array>
+
+    <string-array name="makanan">
+        <item> Daging </item>
+        <item> Sayuran </item>
+        <item> Ikan </item>
+    </string-array>
+</resources>

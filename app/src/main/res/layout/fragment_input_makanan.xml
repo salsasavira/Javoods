@@ -43,7 +43,8 @@
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:entries="@array/makanan" />
 
         <TextView
             android:id="@+id/textView3"
