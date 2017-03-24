@@ -1,9 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,6 +9,13 @@
         tools:context="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.input_makanan">
 
         <!-- TODO: Update blank fragment layout -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
 
         <TextView
             android:id="@+id/textView2"
@@ -47,17 +52,34 @@
             android:text="  Alat dan Bahan : "
             android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fbAlat"
+        <LinearLayout
+            android:id="@+id/l_makanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true"
-            app:backgroundTint="@color/cardview_light_background"
-            app:elevation="5dp"
-            app:fabSize="mini"
-            app:rippleColor="@android:color/background_light"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tambah Alat dan Bahan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            <Button
+                android:id="@+id/btnHapus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hapus" />
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/textView4"
@@ -66,23 +88,48 @@
             android:text="  Cara Memasak :"
             android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fbCara"
+        <LinearLayout
+            android:id="@+id/layout_step"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true"
-            app:backgroundTint="@color/cardview_light_background"
-            app:elevation="5dp"
-            app:fabSize="mini"
-            app:rippleColor="@android:color/background_light"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+            android:orientation="vertical" />
 
-        <Button
-            android:id="@+id/button2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTambah2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Tambah Langkah-Langkah" />
+
+                <Button
+                    android:id="@+id/btnHapus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hapus" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button2"
+                style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
