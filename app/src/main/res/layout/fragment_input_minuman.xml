@@ -1,6 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/ab">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -32,14 +34,18 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nama Resep"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/cardview_light_background"
+            android:textColorHint="@color/cardview_light_background"
+            android:textColorLink="@color/cardview_light_background" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  Kategori :"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/cardview_light_background" />
 
         <Spinner
             android:id="@+id/spinner_minum"
@@ -47,12 +53,14 @@
             android:layout_height="wrap_content"
             android:entries="@array/minuman" />
 
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  Alat dan Bahan : "
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/cardview_light_background" />
 
         <LinearLayout
             android:id="@+id/l_makanan"
@@ -65,20 +73,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnTambah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
-                android:text="Tambah Alat dan Bahan"
-                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+                android:layout_weight="0.50"
+                android:background="#00ffffff"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                app:srcCompat="@drawable/btntambah" />
 
-            <Button
+
+            <ImageButton
                 android:id="@+id/btnHapus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hapus" />
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.50"
+                android:background="#00ffffff"
+                app:srcCompat="@drawable/btnhapus" />
+
 
         </LinearLayout>
 
@@ -88,7 +102,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="  Cara Memasak :"
-            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+            android:textColor="@color/cardview_light_background" />
+
 
         <LinearLayout
             android:id="@+id/layout_step"
@@ -106,32 +122,40 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnTambah2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:text="Tambah Langkah-Langkah" />
+                    android:layout_weight="0.5"
+                    android:background="#00ffffff"
+                    app:srcCompat="@drawable/btnlangkah" />
 
-                <Button
+
+                <ImageButton
                     android:id="@+id/btnHapus2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Hapus" />
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="#00ffffff"
+                    app:srcCompat="@drawable/btnhapus" />
 
 
             </LinearLayout>
 
-            <Button
+            <ImageButton
                 android:id="@+id/button2"
-                style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 android:layout_gravity="center"
-                android:text="Submit" />
+                android:layout_weight="0.5"
+                android:background="#00ffffff"
+                app:srcCompat="@drawable/btnsubmit" />
+
 
         </LinearLayout>
+
 
     </LinearLayout>
 </ScrollView>

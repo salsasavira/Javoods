@@ -7,8 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 
@@ -19,7 +19,7 @@ public class input_makanan extends Fragment {
     int i = 0, j = 0;
     Activity activity;
     LinearLayout lAlat, lStep;
-    Button btPlus, btPlus2, hapus, hapus2, Submit;
+    ImageButton btPlus, btPlus2, hapus, hapus2, Submit;
     public input_makanan() {
         // Required empty public constructor
     }
@@ -33,11 +33,11 @@ public class input_makanan extends Fragment {
         lAlat = (LinearLayout) view.findViewById(R.id.l_makanan);
         lStep = (LinearLayout) view.findViewById(R.id.layout_step);
         activity = getActivity();
-        btPlus = (Button) view.findViewById(R.id.btnTambah);
-        btPlus2 = (Button) view.findViewById(R.id.btnTambah2);
-        hapus = (Button) view.findViewById(R.id.btnHapus);
-        hapus2 = (Button) view.findViewById(R.id.btnHapus2);
-        Submit = (Button) view.findViewById(R.id.button2);
+        btPlus = (ImageButton) view.findViewById(R.id.btnTambah);
+        btPlus2 = (ImageButton) view.findViewById(R.id.btnTambah2);
+        hapus = (ImageButton) view.findViewById(R.id.btnHapus);
+        hapus2 = (ImageButton) view.findViewById(R.id.btnHapus2);
+        Submit = (ImageButton) view.findViewById(R.id.button2);
 
         btPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +89,4 @@ public class input_makanan extends Fragment {
         return view;
 
     }
-
-
 }
