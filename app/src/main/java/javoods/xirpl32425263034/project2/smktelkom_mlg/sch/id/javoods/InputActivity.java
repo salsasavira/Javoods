@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.R;
 
 public class InputActivity extends AppCompatActivity {
 
