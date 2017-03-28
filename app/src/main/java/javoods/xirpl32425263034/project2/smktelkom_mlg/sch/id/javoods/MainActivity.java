@@ -23,10 +23,9 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.M
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MinumanFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.SupportFragment;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-
 
     ViewPager vp_pages;
     TabLayout tbl_pages;

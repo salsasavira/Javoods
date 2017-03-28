@@ -3,39 +3,33 @@
     package="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods">
 
     <application
-        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="DATABASE"
-            android:value="javoods.db" />
-        <meta-data
-            android:name="VERSION"
-            android:value="2" />
-        <meta-data
-            android:name="QUERY_LOG"
-            android:value="true" />
-        <meta-data
-            android:name="DOMAIN_PACKAGE_NAME"
-            android:value="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods" />
-
+        android:theme="@style/AppTheme.NoActionBar" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.SplashScreen"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".InputActivity"
-            android:label="@string/title_activity_input"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.MainActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
