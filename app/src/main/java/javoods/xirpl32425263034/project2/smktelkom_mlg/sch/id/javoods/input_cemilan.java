@@ -54,8 +54,10 @@ public class input_cemilan extends Fragment {
                 hapus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        lAlat.removeView(lAlat.getChildAt(i));
+
                         i--;
+                        lAlat.removeView(lAlat.getChildAt(i));
+
                     }
                 });
             }
@@ -74,8 +76,10 @@ public class input_cemilan extends Fragment {
                 hapus2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        lStep.removeView(lStep.getChildAt(j));
+
                         j--;
+                        lStep.removeView(lStep.getChildAt(j));
+
                     }
                 });
 
