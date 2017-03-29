@@ -21,7 +21,6 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.A
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.CemilanFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MakananFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MinumanFragment;
-import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.SupportFragment;
 
 
 public class MainActivity extends AppCompatActivity
@@ -138,11 +137,6 @@ public class MainActivity extends AppCompatActivity
             vp_pages.setVisibility(View.GONE);
             fragment = new AboutFragment();
             setTitle("About Us");
-        } else if (id == R.id.nav_support) {
-            tbl_pages.setVisibility(View.GONE);
-            vp_pages.setVisibility(View.GONE);
-            fragment = new SupportFragment();
-            setTitle("Support By");
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
