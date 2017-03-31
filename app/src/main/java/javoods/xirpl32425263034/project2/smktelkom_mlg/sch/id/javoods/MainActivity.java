@@ -1,7 +1,10 @@
 package javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -67,6 +70,23 @@ public class MainActivity extends AppCompatActivity
 
         changePage(R.id.nav_makanan);
         navigationView.setCheckedItem(R.id.nav_makanan);
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences getProfs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean isFirstStart = getProfs.getBoolean("firstStart",true);
+                if(isFirstStart){
+                    startActivity(new Intent(MainActivity.this,MyIntro.class));
+                    SharedPreferences.Editor e = getProfs.edit();
+                    e.putBoolean("firstStart",false);
+                    e.apply();
+                }
+            }
+        });
+
+        thread.start();
+
 
     }
 
