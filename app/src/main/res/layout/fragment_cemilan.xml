@@ -11,7 +11,7 @@
 
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardView"
+            android:id="@+id/cardViewCemilan"
             android:layout_width="match_parent"
             android:layout_height="304dp"
             android:layout_gravity="center"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewCemilan"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="5dp"
@@ -34,7 +34,7 @@
                     android:src="@drawable/lapis_terigu" />
 
                 <TextView
-                    android:id="@+id/textViewDeskripsi"
+                    android:id="@+id/tvJudulCemilan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageView"
@@ -48,7 +48,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/buttonEditCamilan"
+                    android:id="@+id/bLihatCamilan"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

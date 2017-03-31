@@ -3,7 +3,6 @@ package javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -20,18 +19,42 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Adapter.CemilanAdapter;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Adapter.DagingAdapter;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Adapter.IkanAdapter;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Adapter.MinumanAdapter;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Adapter.SayuranAdapter;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.AboutFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.CemilanFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MakananFragment;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment.MinumanFragment;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Cemilan;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Daging;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Ikan;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Minuman;
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Sayuran;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    ArrayList<Cemilan> mListCemilan = new ArrayList<>();
+    CemilanAdapter mCemilanAdapter;
+    ArrayList<Minuman> mListMinuman = new ArrayList<>();
+    MinumanAdapter mMinumanAdapter;
+    ArrayList<Daging> mListDaging = new ArrayList<>();
+    DagingAdapter mDagingAdapter;
+    ArrayList<Ikan> mListIkan = new ArrayList<>();
+    IkanAdapter mIkanAdapter;
+    ArrayList<Sayuran> mListSayuran = new ArrayList<>();
+    SayuranAdapter mSayuranAdapter;
+
     ViewPager vp_pages;
     TabLayout tbl_pages;
     PagerAdapter pagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +112,7 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
 
     @Override
     public void onBackPressed() {
