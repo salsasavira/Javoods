@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewCemilan"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="5dp"
@@ -37,7 +37,7 @@
                     android:id="@+id/textViewDeskripsi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
+                    android:layout_below="@+id/imageViewCemilan"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:padding="16dp"
@@ -48,7 +48,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/buttonEditCamilan"
+                    android:id="@+id/ImagebuttonLihatCemilan"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
