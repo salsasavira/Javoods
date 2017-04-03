@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -10,7 +9,6 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="304dp"
@@ -26,7 +24,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageViewCemilan"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="5dp"
@@ -34,10 +32,12 @@
                     android:src="@drawable/lapis_terigu" />
 
                 <TextView
-                    android:id="@+id/textViewDeskripsi"
+                    android:id="@+id/tvJudulCemilan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageViewCemilan"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:padding="16dp"
@@ -47,8 +47,8 @@
                     android:textSize="25dp" />
 
 
-                <ImageButton
-                    android:id="@+id/buttonEditCamilan"
+                <Button
+                    android:id="@+id/bLihatCamilan"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -56,8 +56,7 @@
                     android:layout_centerHorizontal="true"
                     android:elevation="5dp"
                     android:text="Lihat Resep"
-                    android:textColor="?attr/colorPrimary"
-                    app:srcCompat="@drawable/resep" />
+                    android:textColor="?attr/colorPrimary" />
 
 
             </RelativeLayout>

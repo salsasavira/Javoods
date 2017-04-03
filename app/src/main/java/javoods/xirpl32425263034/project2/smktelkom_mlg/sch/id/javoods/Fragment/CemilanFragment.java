@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.DetailActivity;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.R;
@@ -19,7 +18,7 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.R;
  */
 public class CemilanFragment extends Fragment {
 
-    ImageButton imLihat;
+    Button imLihat;
 
     public CemilanFragment() {
         // Required empty public constructor
@@ -32,7 +31,7 @@ public class CemilanFragment extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_cemilan, container, false);
 
 
-        imLihat = (ImageButton) getView().findViewById(R.id.ImagebuttonLihatCemilan);
+        imLihat = (Button) v.findViewById(R.id.bLihatCamilan);
 
         imLihat.setOnClickListener(new View.OnClickListener() {
             @Override

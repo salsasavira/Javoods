@@ -48,7 +48,7 @@
                     android:textSize="25dp" />
 
 
-                <ImageButton
+                <Button
                     android:id="@+id/bLihatIkan"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"

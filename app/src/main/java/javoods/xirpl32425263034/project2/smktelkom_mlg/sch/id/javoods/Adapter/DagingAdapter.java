@@ -76,8 +76,8 @@ public class DagingAdapter extends RecyclerView.Adapter<DagingAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
 
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
-            tvJudul = (TextView) itemView.findViewById(R.id.tvJudulDaging);
+            ivFoto = (ImageView) itemView.findViewById(R.id.imageViewCemilan);
+            tvJudul = (TextView) itemView.findViewById(R.id.tvJudulCemilan);
             bLihat = (Button) itemView.findViewById(R.id.bLihatDaging);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

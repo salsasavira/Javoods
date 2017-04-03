@@ -3,10 +3,21 @@
     package="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods">
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="DATABASE"
+            android:value="javoods.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <!--<meta-data android:name="QUERY_LOG" android:value="true" />-->
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods" />
         <activity
             android:name=".SplashScreen"
             android:label="@string/app_name">

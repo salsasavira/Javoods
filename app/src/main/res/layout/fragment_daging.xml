@@ -38,7 +38,9 @@
                     android:id="@+id/tvJudulDaging"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageViewDaging"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:padding="16dp"
@@ -48,7 +50,7 @@
                     android:textSize="25dp" />
 
 
-                <ImageButton
+                <Button
                     android:id="@+id/bLihatDaging"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
