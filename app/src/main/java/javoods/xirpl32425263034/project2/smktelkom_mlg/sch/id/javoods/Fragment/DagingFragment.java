@@ -1,15 +1,18 @@
 package javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
 
+import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.DetailActivity;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.R;
 import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Makanan;
 
@@ -18,7 +21,7 @@ import javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods.model.Maka
  */
 public class DagingFragment extends Fragment {
 
-    TextView recomend;
+    Button imLihat;
     public DagingFragment() {
         // Required empty public constructor
     }
@@ -27,18 +30,20 @@ public class DagingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_daging, container, false);
+        View v= inflater.inflate(R.layout.fragment_daging, container, false);
         // Inflate the layout for this fragment
 
-        recomend = (TextView) view.findViewById(R.id.tvRecomend);
-        show_recomend();
+        imLihat = (Button) v.findViewById(R.id.bLihatDaging);
 
-        return view;
+        imLihat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DetailActivity.class));
+            }
+
+        });
+        return v;
     }
 
-    private void show_recomend() {
-        List<Makanan> allMakanan = Makanan.listAll(Makanan.class);
-        recomend.setText(allMakanan.toString());
-    }
 
 }

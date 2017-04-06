@@ -38,7 +38,7 @@
                     android:id="@+id/tvJudulSayuran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
+                    android:layout_below="@+id/imageViewSayuran"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:padding="16dp"

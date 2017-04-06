@@ -3,6 +3,7 @@
     package="javoods.xirpl32425263034.project2.smktelkom_mlg.sch.id.javoods">
 
     <application
+        android:largeHeap="true"
         android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

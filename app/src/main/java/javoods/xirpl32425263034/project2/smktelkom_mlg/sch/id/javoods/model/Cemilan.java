@@ -22,4 +22,9 @@ public class Cemilan implements Serializable {
         this.detailcemilan = detail;
         this.fotocemilan = foto;
     }
+
+
+    public void save() {
+
+    }
 }
