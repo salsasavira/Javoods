@@ -14,12 +14,6 @@
         <!-- TODO: Update blank fragment layout -->
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -30,6 +24,12 @@
             android:textColor="@android:color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
 
         <EditText
             android:id="@+id/editText"
@@ -65,87 +65,34 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/cardview_light_background" />
 
-        <LinearLayout
-            android:id="@+id/l_makanan"
+
+        <EditText
+            android:id="@+id/etAlat"
+            style="@android:style/Widget.Holo.Light.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/btnTambah"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_weight="0.50"
-                android:background="#00ffffff"
-                android:textAppearance="@style/TextAppearance.AppCompat.Menu"
-                app:srcCompat="@drawable/btntambah" />
-
-
-            <ImageButton
-                android:id="@+id/btnHapus"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_weight="0.50"
-                android:background="#00ffffff"
-                app:srcCompat="@drawable/btnhapus" />
-
-
-        </LinearLayout>
-
+            android:ems="10"
+            android:hint="Tulis alat dan Bahan"
+            android:inputType="textMultiLine"
+            android:textColor="@color/cardview_light_background" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="  Cara Memasak :"
+            android:text="  Cara Membuat :"
             android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
             android:textColor="@color/cardview_light_background" />
 
-
-        <LinearLayout
-            android:id="@+id/layout_step"
+        <EditText
+            android:id="@+id/etStep"
+            style="@android:style/Widget.Holo.Light.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/btnTambah2"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="#00ffffff"
-                    app:srcCompat="@drawable/btnlangkah" />
-
-
-                <ImageButton
-                    android:id="@+id/btnHapus2"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:background="#00ffffff"
-                    app:srcCompat="@drawable/btnhapus" />
-
-
-            </LinearLayout>
+            android:ems="10"
+            android:hint="Tulis Langkah langkah"
+            android:inputType="textMultiLine"
+            android:textColor="@color/cardview_light_background" />
 
             <ImageButton
                 android:id="@+id/button2"
@@ -156,9 +103,5 @@
                 android:background="#00ffffff"
                 app:srcCompat="@drawable/btnsubmit" />
 
-
         </LinearLayout>
-
-
-    </LinearLayout>
 </ScrollView>
